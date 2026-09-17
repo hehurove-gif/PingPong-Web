@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Pong</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="game-header">
+      <div>
+        <p class="eyebrow">ARCADE CLASSIC</p>
+        <h1>Neon Pong</h1>
+      </div>
+      <div class="scoreboard" aria-label="Scoreboard">
+        <span id="playerScore">0</span>
+        <span class="score-divider">:</span>
+        <span id="computerScore">0</span>
+      </div>
+    </header>
+
+    <section class="game-card">
+      <canvas id="gameCanvas" width="900" height="520" aria-label="Pong game area"></canvas>
+      <div class="game-overlay" id="gameOverlay">
+        <p id="overlayMessage">Move your paddle to start</p>
+        <button id="startButton" type="button">Start Game</button>
+      </div>
+    </section>
+
+    <footer class="controls">
+      <span><kbd>↑</kbd><kbd>↓</kbd> Move paddle</span>
+      <span><kbd>Mouse</kbd> Move paddle</span>
+      <span>First to 5 wins</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
