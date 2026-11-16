@@ -40,4 +40,12 @@ button { border: 0; border-radius: 999px; padding: 12px 25px; color: #07111a; ba
 button:hover { transform: translateY(-2px); box-shadow: 0 0 35px #69f6d299; }
 .controls { display: flex; justify-content: center; flex-wrap: wrap; gap: 18px 28px; padding-top: 18px; color: var(--muted); font-size: .8rem; }
 kbd { display: inline-block; min-width: 24px; margin-right: 4px; padding: 3px 6px; border: 1px solid var(--line); border-radius: 5px; color: var(--text); text-align: center; font-size: .72rem; }
+.levels { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.game-overlay.is-paused .levels, .game-overlay.is-paused .record { display: none; }
+button.level, button.ghost { color: var(--text); background: transparent; border: 1px solid var(--line); box-shadow: none; padding: 8px 16px; font-size: .85rem; }
+button.level:hover, button.ghost:hover { border-color: var(--accent); box-shadow: none; transform: none; }
+button.level[aria-checked="true"] { color: var(--accent); border-color: var(--accent); background: #69f6d21a; box-shadow: 0 0 18px #69f6d233; }
+button.ghost { padding: 4px 12px; font-size: .78rem; font-weight: 600; color: var(--muted); }
+.record { margin: 0; color: var(--muted); font-size: .8rem; }
+button:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 3px; }
 @media (max-width: 600px) { body { padding: 14px; } .game-header { align-items: center; } .controls { gap: 10px 14px; } }

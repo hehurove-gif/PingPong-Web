@@ -10,7 +10,7 @@
   <main class="game-shell">
     <header class="game-header">
       <div>
-        <p class="eyebrow">ARCADE CLASSIC</p>
+        <p class="eyebrow">ARCADE CLASSIC · <span id="levelBadge">NORMAL</span></p>
         <h1>Neon Pong</h1>
       </div>
       <div class="scoreboard" aria-label="Scoreboard">
@@ -23,7 +23,14 @@
     <section class="game-card">
       <canvas id="gameCanvas" width="900" height="520" aria-label="Pong game area"></canvas>
       <div class="game-overlay" id="gameOverlay">
-        <p id="overlayMessage">Move your paddle to start</p>
+        <p id="overlayMessage">Pick a difficulty and start</p>
+        <div class="levels" id="levels" role="radiogroup" aria-label="Difficulty">
+          <button type="button" class="level" role="radio" aria-checked="false" data-level="easy">Easy</button>
+          <button type="button" class="level" role="radio" aria-checked="true" data-level="normal">Normal</button>
+          <button type="button" class="level" role="radio" aria-checked="false" data-level="hard">Hard</button>
+          <button type="button" class="level" role="radio" aria-checked="false" data-level="insane">Insane</button>
+        </div>
+        <p class="record" id="recordLine"></p>
         <button id="startButton" type="button">Start Game</button>
       </div>
     </section>
@@ -31,7 +38,10 @@
     <footer class="controls">
       <span><kbd>↑</kbd><kbd>↓</kbd> Move paddle</span>
       <span><kbd>Mouse</kbd> Move paddle</span>
+      <span><kbd>P</kbd> Pause</span>
+      <span><kbd>1</kbd>–<kbd>4</kbd> Difficulty</span>
       <span>First to 5 wins</span>
+      <button id="soundButton" class="ghost" type="button" aria-pressed="true">🔊 Sound on</button>
     </footer>
   </main>
   <script src="script.js"></script>
